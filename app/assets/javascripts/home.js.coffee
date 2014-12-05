@@ -4,15 +4,14 @@
 jQuery ->
   $('textarea').autosize();
 
-  $("#descArea input").click ->
-      $('#desc_text').css('border', '0px');
+  $("#desc_input").click ->
       $('#desc_text').css('background', '#eeeeee');
-     
-  $("#desc_text").blur ->  
-      $('#desc_text').css('border', '0px');
-      $('#desc_text').css('background', '#eeeeee');
+      $("#desc_text").blur();
 
    $("#desc_text").click ->
-     $('#desc_text').css('border', '1px');
+     $("#desc_text").css('background', '#ffffff');
+     $("#desc_text").focus();
+     
+   $(".glyphicon-pencil").click ->
      $("#desc_text").css('background', '#ffffff');
      $("#desc_text").focus();

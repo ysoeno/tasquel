@@ -63,15 +63,16 @@
        </table>
        <!-- DBからの表示の終了 --> 
        <br/>
-       <h3>薬の種類</h3>
+       <h3>飲んでいる薬</h3>
         <table class="table">
         	<tr>
        		  <%= form_tag("/modify_medicine_desc", method: "get", class: "form-inline") do %>
        		  <td>
        			<%= text_area_tag 'medicine_desc', @medicine_desc, placeholder: @medicine_desc, class: "exampleInputEmail6 form-control resizable", id:"desc_text" %>
+       			<span class="glyphicon glyphicon-pencil pull-right" id="descPencil" aria-hidden="true"></span>
        		  </td>
        	  　　<td>
-	           <input class="exampleInputEmail6 btn btn-default btn-lg" id="desc_input" name="commit" type="submit" value="+ 追加" />
+	           <input class="exampleInputEmail6 btn btn-default btn-lg" id="desc_input" name="commit" type="submit" value="変更" />
 	     	 </td>
 	     	  <% end %>
        		</tr>
